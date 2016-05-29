@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1509" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="XyR-6H-aY5">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="questionsForTikTok" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="AjO-9Y-70P">
+                                <rect key="frame" x="0.0" y="50" width="600" height="530"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="cell" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="150" id="EzN-Nw-EWZ" userLabel="cell" customClass="CustomizeCell" customModule="questionsForTikTok" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="92" width="600" height="150"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="EzN-Nw-EWZ" id="ivW-ib-a1m">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="149"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jcM-J0-saa">
+                                                    <rect key="frame" x="28" y="13" width="42" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="pGJ-pY-IuK"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="pGJ-pY-IuK"/>
+                                                        </mask>
+                                                    </variation>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="jcM-J0-saa" firstAttribute="leading" secondItem="ivW-ib-a1m" secondAttribute="leadingMargin" constant="20" id="3kd-c4-5ZV"/>
+                                                <constraint firstItem="jcM-J0-saa" firstAttribute="top" secondItem="ivW-ib-a1m" secondAttribute="topMargin" constant="3" id="Xmh-T6-emF"/>
+                                                <constraint firstItem="jcM-J0-saa" firstAttribute="top" secondItem="ivW-ib-a1m" secondAttribute="topMargin" constant="5" id="qPM-eV-nIE"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="Xmh-T6-emF"/>
+                                                </mask>
+                                            </variation>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="title" destination="jcM-J0-saa" id="VLh-mw-A50"/>
+                                            <segue destination="lcE-de-9OI" kind="show" identifier="showReading" id="eFE-Hq-47O"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="QaS-d7-nTf"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="7kN-3f-vqU"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="AjO-9Y-70P" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="0b3-se-A9w"/>
+                            <constraint firstItem="AjO-9Y-70P" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1kE-ys-80x"/>
+                            <constraint firstAttribute="bottom" secondItem="AjO-9Y-70P" secondAttribute="bottom" constant="20" symbolic="YES" id="il3-nW-848"/>
+                            <constraint firstItem="AjO-9Y-70P" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="50" id="kCE-bP-HLJ"/>
+                            <constraint firstItem="AjO-9Y-70P" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="kmZ-NO-0yz"/>
+                            <constraint firstItem="AjO-9Y-70P" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="qr6-7H-9ML"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="kmZ-NO-0yz"/>
+                                <exclude reference="qr6-7H-9ML"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" id="sC1-1S-DXx"/>
+                    <connections>
+                        <outlet property="tableView" destination="AjO-9Y-70P" id="9dk-uI-2Rx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1549" y="429"/>
+        </scene>
+        <!--Back-->
+        <scene sceneID="jqf-gR-eyP">
+            <objects>
+                <viewController id="lcE-de-9OI" customClass="DescViewController" customModule="questionsForTikTok" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="irB-cq-nTF"/>
+                        <viewControllerLayoutGuide type="bottom" id="oYb-zP-Zmr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="G0V-am-Lnf">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NGB-Pi-kSd">
+                                <rect key="frame" x="50" y="114" width="500" height="314"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="500" id="HZ9-ym-80L"/>
+                                </constraints>
+                                <string key="text">All spiders spin webs. That's because webs help spiders. Webs help spiders do three things. Webs help spiders hold eggs. Webs help spiders hide. And webs help spiders catch food. Webs help spiders hold eggs. Many spiders like to lay their eggs in their webs. The webs help keep the eggs together. Webs help spiders keep their eggs safe. Webs help spiders hide. Most spiders are dark. They are brown, grey, or black. But spider webs are light. They are white and cloudy. When spiders hide in their webs, they are harder to see. Webs help spiders catch food. Spider webs are sticky. When a bug flies into the web, it gets stuck. It moves around. It tries to get out. But it can't. It is trapped! Spiders can tell that the bug is trapped. That's because spiders feel the web move. And the spider is hungry. The spider goes to get the bug. As you can see, webs help spiders hold eggs. Webs help spiders hide. And webs help spiders catch food. Without webs, spiders would not be able to</string>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="HZ9-ym-80L"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="NGB-Pi-kSd" firstAttribute="leading" secondItem="G0V-am-Lnf" secondAttribute="leadingMargin" constant="30" id="R5x-CA-ACN"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="NGB-Pi-kSd" secondAttribute="trailing" constant="30" id="lYz-Ab-wPC"/>
+                            <constraint firstItem="NGB-Pi-kSd" firstAttribute="top" secondItem="irB-cq-nTF" secondAttribute="bottom" constant="50" id="zfE-iY-y0g"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Back" id="DaW-Qb-OM9">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="f58-Zh-xvr">
+                            <connections>
+                                <segue destination="BYZ-38-t0r" kind="showDetail" id="r0b-lp-Yng"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="D0e-zr-oAY" userLabel="Next">
+                            <connections>
+                                <segue destination="BbL-90-qCh" kind="show" id="Oyv-8L-ffa"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="reading" destination="NGB-Pi-kSd" id="CoA-rS-3I9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1iG-3H-V76" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2302" y="429"/>
+        </scene>
+        <!--Question View Controller-->
+        <scene sceneID="2lv-ZJ-7mW">
+            <objects>
+                <viewController id="BbL-90-qCh" customClass="QuestionViewController" customModule="questionsForTikTok" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="J7v-lV-Pqa"/>
+                        <viewControllerLayoutGuide type="bottom" id="hQT-SY-1Lf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vum-mb-3jP">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="kjcvckjvkxcjvlxkjvlkcjvivhhufiadugfiushouhgfouhgfubhvfuh" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pTf-2M-NOc">
+                                <rect key="frame" x="117" y="164" width="344" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WSb-xz-eDq">
+                                <rect key="frame" x="277" y="235" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="Button1Action:" destination="BbL-90-qCh" eventType="touchUpInside" id="laa-VH-dKy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oq7-yP-TRQ">
+                                <rect key="frame" x="277" y="275" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="Button2Action:" destination="BbL-90-qCh" eventType="touchUpInside" id="Bnl-75-KIx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h2w-JP-VOk">
+                                <rect key="frame" x="277" y="315" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="Button3Action:" destination="BbL-90-qCh" eventType="touchUpInside" id="n3R-Jn-yme"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="WSb-xz-eDq" firstAttribute="width" secondItem="pTf-2M-NOc" secondAttribute="width" id="6Xu-E2-QHK"/>
+                            <constraint firstItem="h2w-JP-VOk" firstAttribute="centerX" secondItem="Oq7-yP-TRQ" secondAttribute="centerX" id="9GG-kD-sZ5"/>
+                            <constraint firstItem="pTf-2M-NOc" firstAttribute="top" secondItem="J7v-lV-Pqa" secondAttribute="bottom" constant="100" id="GBT-fs-aFZ"/>
+                            <constraint firstItem="WSb-xz-eDq" firstAttribute="top" secondItem="pTf-2M-NOc" secondAttribute="bottom" constant="50" id="NEK-yo-W0B"/>
+                            <constraint firstItem="pTf-2M-NOc" firstAttribute="centerX" secondItem="vum-mb-3jP" secondAttribute="centerX" id="Tlm-vE-Qjt"/>
+                            <constraint firstItem="WSb-xz-eDq" firstAttribute="centerX" secondItem="vum-mb-3jP" secondAttribute="centerX" id="bXh-QN-jpU"/>
+                            <constraint firstItem="h2w-JP-VOk" firstAttribute="top" secondItem="Oq7-yP-TRQ" secondAttribute="bottom" constant="10" id="emi-rX-wob"/>
+                            <constraint firstItem="pTf-2M-NOc" firstAttribute="centerY" secondItem="vum-mb-3jP" secondAttribute="centerY" id="hsc-9h-Wzh"/>
+                            <constraint firstItem="Oq7-yP-TRQ" firstAttribute="centerX" secondItem="WSb-xz-eDq" secondAttribute="centerX" id="w00-WY-xuk"/>
+                            <constraint firstItem="Oq7-yP-TRQ" firstAttribute="top" secondItem="WSb-xz-eDq" secondAttribute="bottom" constant="10" id="z40-FB-oC6"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="hsc-9h-Wzh"/>
+                                <exclude reference="6Xu-E2-QHK"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="Button3Action" destination="h2w-JP-VOk" id="psX-F4-Vfx"/>
+                        <outlet property="button1" destination="WSb-xz-eDq" id="RfW-e4-o2H"/>
+                        <outlet property="button2" destination="Oq7-yP-TRQ" id="URv-Du-LzP"/>
+                        <outlet property="button3" destination="h2w-JP-VOk" id="mTy-Tf-sHh"/>
+                        <outlet property="questionLabel" destination="pTf-2M-NOc" id="4x8-CG-m9C"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y6A-cB-kty" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3000" y="429"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Sca-vq-LOC">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="XyR-6H-aY5" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ioC-3k-h59">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="GLN-V2-sYf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TXr-gB-iZE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="737" y="429"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="GLN-V2-sYf"/>
+    </inferredMetricsTieBreakers>
+</document>
